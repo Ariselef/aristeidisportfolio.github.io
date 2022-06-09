@@ -7,21 +7,10 @@ on:
   pull_request:
     branches: [ "main" ]
 
-env:
-  DAY_OF_WEEK: Monday
 
 jobs:
-  greeting_job:
     runs-on: ubuntu-latest
-    env:
-      Greeting: Hello
-    steps:
-      - name: "Say Hello Mona it's Monday"
-        if: ${{ env.DAY_OF_WEEK == 'Monday' }}
-        run: echo "$Greeting $First_Name. Today is $DAY_OF_WEEK!"
-        env:
-          First_Name: Mona
-          
+    
       - uses: actions/checkout@v3
         with:
           aws_key_id: ${{ secrets.AWS_KEY_ID }}
