@@ -23,7 +23,7 @@ jobs:
           aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY}}
           aws_bucket: ${{ secrets.AWS_BUCKET }}
           aws-region: eu-north-1
-      - run: aws s3 sync ./out s3://www.aristeidiseleftheriou.com/Aris portfolio/
+      - run: aws s3 sync "./out s3://www.aristeidiseleftheriou.com/Aris portfolio/"
 
 
 
