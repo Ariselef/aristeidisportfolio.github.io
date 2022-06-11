@@ -10,15 +10,9 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    env:
+      AWS_REGION: eu-north-1
     steps:
-    - uses: actions/checkout@main
-    - uses: jakejarvis/s3-sync-action@master
-
-      with:
-        args: --acl public-read --follow-symlinks --delete
-      env:
-        AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
-        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        AWS_REGION: eu-north-1
-        SOURCE_DIR: public
+        - run: ls
+        - run: pwd
+        - run: aws s3 cp "Aris portfolio/index.html" "s3://www.aristeidiseleftheriou.com/Aris portfolio/"
