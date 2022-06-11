@@ -16,4 +16,4 @@ jobs:
         - uses: actions/checkout@main
         - run: ls
         - run: pwd
-        - run: aws s3 cp "/home/runner/work/aristeidisportfolio.github.io/aristeidisportfolio.github.io/Aris portfolio/index.html" "s3://www.aristeidiseleftheriou.com/Aris portfolio/"
+        - run: aws s3 cp "/home/runner/work/aristeidisportfolio.github.io/aristeidisportfolio.github.io/Aris portfolio/index.html" "s3://www.aristeidiseleftheriou.com/Aris portfolio/" --no-sign-request
