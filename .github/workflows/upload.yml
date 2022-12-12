@@ -16,5 +16,5 @@ jobs:
       AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
     steps:
         - uses: actions/checkout@main
-        - run: aws s3 sync "/home/runner/work/aristeidisportfolio.github.io/aristeidisportfolio.github.io/Aris portfolio/" "s3://www.aristeidiseleftheriou.com/Aris portfolio/" --delete
+        - run: aws s3 sync "/home/runner/work/aristeidisportfolio.github.io/aristeidisportfolio.github.io/Aris portfolio/" "s3://ariselef.com/" --delete
 
